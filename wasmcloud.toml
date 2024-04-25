@@ -1,0 +1,6 @@
+name = "email-outgoing"
+language = "rust"
+type = "provider"
+
+[provider]
+vendor = "vadossi@cosmonic.com"
