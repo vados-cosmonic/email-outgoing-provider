@@ -32,19 +32,19 @@ just deploy-demo
 
 The `deploy-demo` target will:
 
-- Start a local SMTP server with `docker` ([Mailcatcher][mailcatcher] via [`dockage/mailcatcher`](https://hub.docker.com/r/dockage/mailcatcher)
+- Start a local SMTP server with `docker` ([Mailcatcher][mailcatcher] via [`dockage/mailcatcher`](https://hub.docker.com/r/dockage/mailcatcher))
 - Start a wasmCloud host with `wash` (i.e. running `wash up --detached`)
 - Build the outgoing email provider (`email-outgoing-provider`)
 - Build the example email component (`email-hello-world`)
 - Set up configuration, provider, component and links 
 
-Once the demo is running, you can inspect the lattice with the usual tooling (i.e. `wash`):
+Once `deploy-demo` has finished, your single-host lattice should be running everything it needs -- you can inspect the lattice with the usual tooling (i.e. `wash`):
 
 ```console
 wash get inventory
 ```
 
-**And once you're ready, you can invoke an example email to be sent:**
+**Once you're ready, you can invoke an example email send:**
 
 ```console
 just send-demo-email
